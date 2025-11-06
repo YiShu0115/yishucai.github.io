@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cai Yishu | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #fafafa;
+      --fg: #222;
+      --muted: #666;
+      --primary: #007acc;
+      --ink: #1e1e1e;
+      --card: #fff;
+      --line: #e6e6e6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.7 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    header {
+      background: var(--ink);
+      color: #fff;
+      padding: 32px 16px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    header p { margin: 0; color: #ccc; }
+    nav {
+      background: #333;
+      text-align: center;
+    }
+    nav a {
+      display: inline-block;
+      color: #eee;
+      text-decoration: none;
+      padding: 12px 14px;
+      margin: 0 4px;
+      font-weight: 500;
+    }
+    nav a:hover { color: #7fd3ff; }
+    main {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 24px 24px 20px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      color: var(--primary);
+      margin: 0 0 16px;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+    }
+    h3 {
+      margin: 10px 0 4px;
+      font-size: 1.05rem;
+      color: var(--fg);
+    }
+    p, li { margin: 6px 0; }
+    ul { padding-left: 20px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .small { color: var(--muted); font-size: 0.9rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .pill {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      margin: 4px 6px 0 0;
+      background: #fff;
+      font-size: 13px;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 28px 12px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cai Yishu</h1>
+    <p>MDS @ HKU · BS in Statistics @ Fudan · Computer Vision / Optical Flow</p >
+  </header>
 
+  <nav>
+    <a href=" ">About</a >
+    <a href="#research">Research</a >
+    <a href="#projects">Projects</a >
+    <a href="#awards">Honors</a >
+    <a href="#contact">Contact</a >
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a Master of Data Science student at <strong>The University of Hong Kong</strong> (GPA: 3.75/4.3)
+        and hold a B.S. in Statistics from <strong>Fudan University</strong> (GPA: 3.58/4.0).
+      </p >
+      <p>
+        My research focuses on <strong>Optical Flow Estimation, Temporal Modeling, and Efficient Vision Systems</strong>.
+        I’m interested in bridging computational efficiency and semantic accuracy in computer vision.
+      </p >
+      <div>
+        <span class="pill">Optical Flow</span>
+        <span class="pill">Vision Transformers</span>
+        <span class="pill">Deep Learning</span>
+        <span class="pill">Temporal Modeling</span>
+        <span class="pill">Efficient AI</span>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research Experience</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>High-accuracy & Lightweight Optical Flow</h3>
+          <p class="small">HKU Visual AI Lab · Research Intern · 03/2025–Present</p >
+          <ul>
+            <li>Built standardized model testing pipeline (EPE, PXL, Fl-all) and benchmarked 11+ SOTA models.</li>
+            <li>Improved large-displacement warping performance through optimized loss functions and constraints.</li>
+            <li>Reduced computational cost via operator optimization, quantization, and pruning.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Earthquake Cluster Effect in China</h3>
+          <p class="small">Fudan University · Undergraduate Thesis · 10/2023–03/2024</p >
+          <ul>
+            <li>Developed Compound Hawkes Processes integrating Hawkes and Markov models to capture aftershock clustering.</li>
+            <li>Implemented Newton-based parameter estimation and validated with 1999–2023 earthquake data.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Optical Flow Benchmark Suite</h3>
+          <p>Unified evaluation scripts (EPE, PXL, Fl-all) for 11+ models with automated visualization and fair comparison.</p >
+          <p><a href="#" target="_blank">Code / Docs (GitHub)</a ></p >
+        </div>
+        <div class="card">
+          <h3>Retail NER Data Pipeline</h3>
+          <p>Constructed NER dataset (5k+ samples) and full evaluation pipeline using open-source models for product classification.</p >
+          <p><a href="#" target="_blank">Repository</a ></p >
+        </div>
+        <div class="card">
+          <h3>Real-time Price & Promotion ETL</h3>
+          <p>Developed SQLServer ETL system for 1M+ transactions enabling real-time pricing and promotion analytics.</p >
+          <p><a href="#" target="_blank">Notes</a ></p >
+        </div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2>Honors & Awards</h2>
+      <ul>
+        <li>Excellent Graduate Scholarship, Fudan University (2023–2024)</li>
+        <li>Third-class Graduate Scholarship, Fudan University (2023–2024)</li>
+        <li>Second Prize ×2, China Undergraduate Mathematical Contest in Modeling (2021–2022)</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:yishu.cai@connect.hku.hk">yishu.cai@connect.hku.hk</a > ·
+        <a href="https://github.com/caiyishu" target="_blank">GitHub</a > ·
+        <a href="https://caiyishu.github.io" target="_blank">Website</a >
+      </p >
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Cai Yishu · Built with ❤️ on GitHub Pages
+  </footer>
+</body>
+</html>
